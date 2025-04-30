@@ -1,0 +1,25 @@
+{
+  "name": "kubex/zinc-php",
+  "description": "A PHP wrapper for Zinc. Easily build UI elements.",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Kyle Essex",
+      "email": "kylegavinessex@hotmail.com"
+    }
+  ],
+  "require": {
+    "packaged/glimpse": "^2.8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "\\Kubex\\Zinc\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "\\Kubex\\ZincTests\\": "tests/"
+    }
+  }
+}

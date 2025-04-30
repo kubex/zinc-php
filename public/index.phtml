@@ -1,0 +1,84 @@
+<?php
+
+include_once '../vendor/autoload.php';
+
+use Kubex\Zinc\Components\Button\Button;
+use Kubex\Zinc\Components\Button\ButtonColor;
+use Kubex\Zinc\Components\Icon\Icon;
+use Kubex\Zinc\Components\Icon\IconColor;
+use Kubex\Zinc\Components\Icon\IconLibrary;
+use Kubex\Zinc\Components\Icon\Icons;
+use Kubex\Zinc\Components\Panel\Panel;
+use Packaged\Glimpse\Tags\Span;
+
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="./zn.min.css">
+  <script type="module" src="./zn.min.js"></script>
+</head>
+<body style="max-width: 1240px; margin: 0 auto; padding: 20px;">
+
+<h1>Button Examples</h1>
+
+<?= Button::create()
+  ->setContent('Button')
+  ->color(ButtonColor::TRANSPARENT) ?>
+
+<br><br>
+
+<?= Button::create('Hello World')
+  ->color(ButtonColor::ERROR) ?>
+
+
+<br><br>
+
+<?= Button::create('Hello World')
+  ->icon(Icons::HOUSE)
+  ->iconSize(30)
+  ->color(ButtonColor::ERROR) ?>
+
+<br><br>
+
+<h1>Icon Examples</h1>
+
+<?=
+Icon::create()
+  ->src(Icons::HOUSE)
+  ->library(IconLibrary::MATERIAL_TWO_TONE)
+?>
+
+<?=
+Icon::create()
+  ->src(Icons::ALARM_ON)
+  ->color(IconColor::ERROR)
+  ->size(32)
+  ->round()
+?>
+
+<br><br>
+
+<h1>Panel Examples</h1>
+
+<br><br>
+
+<?= Panel::create('Panel Content')
+  ->caption('My Caption')
+  ->description('My Description')
+  ->actions(
+    Button::create('Hello World'),
+    Button::create('Hello World 2'),
+    Button::create('Hello World 3')
+  )
+  ->footer(Span::create('The Footer Woo')) ?>
+
+<br>
+
+
+</body>
+</html>
