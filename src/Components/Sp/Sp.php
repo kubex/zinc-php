@@ -35,19 +35,19 @@ class Sp extends ZincHtmlElement
 
   public function padX(): static
   {
-    $this->setAttribute('padX', true);
+    $this->setAttribute('pad-x', true);
     return $this;
   }
 
   public function padY(): static
   {
-    $this->setAttribute('padY', true);
+    $this->setAttribute('pad-y', true);
     return $this;
   }
 
   public function noGap(): static
   {
-    $this->setAttribute('noGap', true);
+    $this->setAttribute('no-gap', true);
     return $this;
   }
 
@@ -59,19 +59,19 @@ class Sp extends ZincHtmlElement
 
   public function flushX(): static
   {
-    $this->setAttribute('flushX', true);
+    $this->setAttribute('flush-x', true);
     return $this;
   }
 
   public function flushY(): static
   {
-    $this->setAttribute('flushY', true);
+    $this->setAttribute('flush-y', true);
     return $this;
   }
 
   public function widthContainer(): static
   {
-    $this->setAttribute('widthContainer', true);
+    $this->setAttribute('width-container', true);
     return $this;
   }
 }
