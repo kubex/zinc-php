@@ -4,7 +4,6 @@ namespace Kubex\Zinc\Components\Item;
 
 use Kubex\Zinc\Attributes\Size;
 use Kubex\Zinc\ZincHtmlElement;
-use Packaged\Ui\Html\HtmlElement;
 
 class Item extends ZincHtmlElement
 {
