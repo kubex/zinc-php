@@ -1,6 +1,6 @@
 <?php
 
-namespace Kubex\Zinc;
+namespace Kubex\Zinc\Attributes;
 
 enum Enctype: string
 {

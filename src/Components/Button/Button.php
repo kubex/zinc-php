@@ -2,10 +2,13 @@
 
 namespace Kubex\Zinc\Components\Button;
 
+use Kubex\Zinc\Attributes\Enctype;
+use Kubex\Zinc\Attributes\Method;
+use Kubex\Zinc\Attributes\Target;
+use Kubex\Zinc\Components\Button\Attributes\ButtonColor;
+use Kubex\Zinc\Components\Button\Attributes\ButtonIconPosition;
+use Kubex\Zinc\Components\Button\Attributes\ButtonSize;
 use Kubex\Zinc\Components\Icon\Icons;
-use Kubex\Zinc\Enctype;
-use Kubex\Zinc\Method;
-use Kubex\Zinc\Target;
 use Kubex\Zinc\ZincHtmlElement;
 
 class Button extends ZincHtmlElement

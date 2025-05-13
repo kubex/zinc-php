@@ -1,6 +1,6 @@
 <?php
 
-namespace Kubex\Zinc\Components\Button;
+namespace Kubex\Zinc\Components\Button\Attributes;
 
 enum ButtonSize: string
 {
