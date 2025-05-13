@@ -4,8 +4,8 @@ namespace Kubex\Zinc;
 
 enum Target: string
 {
-  const TOP = '_top';
-  const BLANK = '_blank';
-  const SELF = '_self';
-  const PARENT = '_parent';
+  case TOP = '_top';
+  case BLANK = '_blank';
+  case SELF = '_self';
+  case PARENT = '_parent';
 }

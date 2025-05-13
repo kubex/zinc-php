@@ -4,6 +4,6 @@ namespace Kubex\Zinc;
 
 enum Method: string
 {
-  const POST = 'post';
-  const GET = 'get';
+  case POST = 'post';
+  case GET = 'get';
 }
