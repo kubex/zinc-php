@@ -56,4 +56,10 @@ class Item extends ZincHtmlElement
     $this->setAttribute('noPadding', true);
     return $this;
   }
+
+  public function grid(): static
+  {
+    $this->setAttribute('grid', true);
+    return $this;
+  }
 }
