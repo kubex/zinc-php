@@ -25,39 +25,6 @@ class Cell implements JsonSerializable
   {
   }
 
-  public static function i(
-    string  $text,
-    string  $heading,
-    ?string $color = null,
-    ?string $style = null,
-    ?string $iconSrc = null,
-    ?string $iconColor = null,
-    ?string $hoverContent = null,
-    ?string $hoverPlacement = null,
-    ?string $chipColor = null,
-    ?string $gaid = null,
-    ?string $sortValue = null,
-    ?string $uri = null,
-    ?string $target = null,
-  ): static
-  {
-    return new static(
-      $text,
-      $heading,
-      $color,
-      $style,
-      $iconSrc,
-      $iconColor,
-      $hoverContent,
-      $hoverPlacement,
-      $chipColor,
-      $gaid,
-      $sortValue,
-      $uri,
-      $target,
-    );
-  }
-
   public function jsonSerialize(): mixed
   {
     $properties = get_object_vars($this);

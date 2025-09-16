@@ -12,7 +12,7 @@ class TableTest extends TestCase
 {
   public function testEmptyTable()
   {
-    $table = Table::i();
+    $table = new Table();
     $expected = json_encode(['rows' => []]);
     $result = json_encode($table->jsonSerialize());
     $this->assertJsonStringEqualsJsonString($expected, $result);
@@ -20,14 +20,14 @@ class TableTest extends TestCase
 
   public function testTable()
   {
-    $table = Table::i();
+    $table = new Table();
 
     $rowId1 = 'row-1';
     $rowUri1 = '/row/uri/1';
     $rowTarget1 = 'modal';
     $rowGaid1 = '/uri/gaid';
 
-    $row1 = Row::i($rowId1, $rowUri1, $rowTarget1, $rowGaid1);
+    $row1 = new Row($rowId1, $rowUri1, $rowTarget1, $rowGaid1);
 
     $text1 = 'Full Cell';
     $heading1 = 'Title';
@@ -43,7 +43,7 @@ class TableTest extends TestCase
     $uri1 = 'uri/link';
     $target1 = 'modal';
 
-    $cell1 = Cell::i(
+    $cell1 = new Cell(
       $text1,
       $heading1,
       $color1,
@@ -65,7 +65,7 @@ class TableTest extends TestCase
     $color2 = 'primary';
     $style2 = 'bold';
 
-    $cell2 = Cell::i(
+    $cell2 = new Cell(
       $text2,
       $heading2,
       $color2,
@@ -75,14 +75,14 @@ class TableTest extends TestCase
 
     $action1Text = 'Action 1';
     $action1Uri = '/action/uri/1';
-    $action1 = Action::i($action1Text, $action1Uri);
+    $action1 = new Action($action1Text, $action1Uri);
     $row1->addAction($action1);
 
     $action2Text = 'Action 2';
     $action2Uri = '/action/uri/2';
     $action2Gaid = '/uri/gaid/2';
     $action2Target = 'modal';
-    $action2 = Action::i($action2Text, $action2Uri, $action2Target, $action2Gaid);
+    $action2 = new Action($action2Text, $action2Uri, $action2Target, $action2Gaid);
     $row1->addAction($action2);
 
     $table->addRow($row1);
@@ -92,13 +92,13 @@ class TableTest extends TestCase
     $rowTarget2 = 'modal';
     $rowGaid2 = '/uri/gaid';
 
-    $row2 = Row::i($rowId2, $rowUri2, $rowTarget2, $rowGaid2);
+    $row2 = new Row($rowId2, $rowUri2, $rowTarget2, $rowGaid2);
 
     $text3 = 'Cell 3';
     $heading3 = 'Heading 3';
     $color3 = 'accent';
 
-    $cell3 = Cell::i(
+    $cell3 = new Cell(
       $text3,
       $heading3,
       $color3,
@@ -109,7 +109,7 @@ class TableTest extends TestCase
     $action3Uri = '/action/uri/3';
     $action3Gaid = '/uri/gaid/3';
     $action3Target = 'modal';
-    $action3 = Action::i($action3Text, $action3Uri, $action3Target, $action3Gaid);
+    $action3 = new Action($action3Text, $action3Uri, $action3Target, $action3Gaid);
     $row2->addAction($action3);
 
     $table->addRow($row2);

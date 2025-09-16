@@ -15,16 +15,6 @@ class Action implements JsonSerializable
   {
   }
 
-  public static function i(
-    string  $text,
-    string  $uri,
-    ?string $target = null,
-    ?string $gaid = null
-  ): static
-  {
-    return new static($text, $uri, $target, $gaid);
-  }
-
   public function jsonSerialize(): mixed
   {
     $properties = get_object_vars($this);

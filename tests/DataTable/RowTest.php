@@ -16,7 +16,7 @@ class RowTest extends TestCase
     $rowTarget = 'modal';
     $rowGaid = '/uri/gaid';
 
-    $row = Row::i($rowId, $rowUri, $rowTarget, $rowGaid);
+    $row = new Row($rowId, $rowUri, $rowTarget, $rowGaid);
 
     $text1 = 'Full Cell';
     $heading1 = 'Title';
@@ -32,7 +32,7 @@ class RowTest extends TestCase
     $uri1 = 'uri/link';
     $target1 = 'modal';
 
-    $cell1 = Cell::i(
+    $cell1 = new Cell(
       $text1,
       $heading1,
       $color1,
@@ -54,7 +54,7 @@ class RowTest extends TestCase
     $color2 = 'primary';
     $style2 = 'bold';
 
-    $cell2 = Cell::i(
+    $cell2 = new Cell(
       $text2,
       $heading2,
       $color2,
@@ -64,14 +64,14 @@ class RowTest extends TestCase
 
     $action1Text = 'Action 1';
     $action1Uri = '/action/uri/1';
-    $action1 = Action::i($action1Text, $action1Uri);
+    $action1 = new Action($action1Text, $action1Uri);
     $row->addAction($action1);
 
     $action2Text = 'Action 2';
     $action2Uri = '/action/uri/2';
     $action2Gaid = '/uri/gaid/2';
     $action2Target = 'modal';
-    $action2 = Action::i($action2Text, $action2Uri, $action2Target, $action2Gaid);
+    $action2 = new Action($action2Text, $action2Uri, $action2Target, $action2Gaid);
     $row->addAction($action2);
 
     $expected = json_encode([

@@ -13,7 +13,7 @@ class ActionTest extends TestCase
     $uri = '/action/uri/2';
     $gaid = '/uri/gaid/2';
     $target = 'modal';
-    $action = Action::i($text, $uri, $target, $gaid);
+    $action = new Action($text, $uri, $target, $gaid);
     $this->assertEquals([
       'text'   => $text,
       'uri'    => $uri,

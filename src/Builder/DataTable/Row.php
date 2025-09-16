@@ -20,16 +20,6 @@ class Row implements JsonSerializable
   {
   }
 
-  public static function i(
-    string  $id,
-    ?string $uri = null,
-    ?string $target = null,
-    ?string $gaid = null
-  ): static
-  {
-    return new static($id, $uri, $target, $gaid);
-  }
-
   public function addCell(Cell $cell): static
   {
     $this->_cells[] = $cell;

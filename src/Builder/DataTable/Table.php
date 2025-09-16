@@ -11,11 +11,6 @@ class Table implements JsonSerializable
 
   public function __construct() { }
 
-  public static function i(): static
-  {
-    return new static();
-  }
-
   public function addRow(Row $row): static
   {
     $this->_rows[] = $row;

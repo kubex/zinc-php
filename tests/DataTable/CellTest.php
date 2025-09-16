@@ -24,7 +24,7 @@ class CellTest extends TestCase
     $gaid = '/uri/gaid';
     $sortValue = '1234';
     $uri = 'uri/link';
-    $cell = Cell::i(
+    $cell = new Cell(
       $text,
       $heading,
       $color,
