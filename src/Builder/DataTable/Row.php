@@ -26,6 +26,13 @@ class Row implements JsonSerializable
     return $this;
   }
 
+  /** @var Cell[] $cells */
+  public function addCells(array $cells): static
+  {
+    array_push($this->_cells, ...$cells);
+    return $this;
+  }
+
   public function addAction(Action $action): static
   {
     $this->_actions[] = $action;
