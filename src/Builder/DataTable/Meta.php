@@ -14,7 +14,8 @@ class Meta implements JsonSerializable
   {
   }
 
-  public function jsonSerialize(): array
+  /** @noinspection PhpMixedReturnTypeCanBeReducedInspection */
+  public function jsonSerialize(): mixed
   {
     return [
       'per_page'    => $this->_perPage,
