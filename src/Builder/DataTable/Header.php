@@ -13,6 +13,7 @@ class Header implements JsonSerializable
     protected ?bool  $_default = true,
     protected ?bool  $_sortable = true,
     protected ?bool  $_filterable = true,
+    protected ?bool  $_visible = true,
   )
   {
   }
