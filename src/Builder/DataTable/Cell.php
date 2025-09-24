@@ -6,7 +6,6 @@ use JsonSerializable;
 
 class Cell implements JsonSerializable
 {
-
   public function __construct(
     protected string  $_text,
     protected string  $_heading,
