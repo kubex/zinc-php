@@ -9,17 +9,6 @@ class Table implements JsonSerializable
   /** @var Row[] $_rows */
   protected array $_rows = [];
 
-  /** @var string[] $_headers */
-  protected array $_headers = [];
-
-  public function __construct() { }
-
-  public function setHeaders(array $headers): static
-  {
-    $this->_headers = $headers;
-    return $this;
-  }
-
   public function addRow(Row $row): static
   {
     $this->_rows[] = $row;
