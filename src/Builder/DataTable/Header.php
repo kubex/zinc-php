@@ -20,13 +20,12 @@ class Header implements JsonSerializable
   public function jsonSerialize(): mixed
   {
     return [
-      $this->_key => [
-        'label'      => $this->_label,
-        'required'   => $this->_required,
-        'default'    => $this->_default,
-        'sortable'   => $this->_sortable,
-        'filterable' => $this->_filterable,
-      ],
+      'key'        => $this->_key,
+      'label'      => $this->_label,
+      'required'   => $this->_required,
+      'default'    => $this->_default,
+      'sortable'   => $this->_sortable,
+      'filterable' => $this->_filterable,
     ];
   }
 }
