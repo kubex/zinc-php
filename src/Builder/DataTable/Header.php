@@ -17,7 +17,7 @@ class Header implements JsonSerializable
   {
   }
 
-  public function jsonSerialize(): mixed
+  public function jsonSerialize(): array
   {
     return [
       'key'        => $this->_key,
