@@ -18,6 +18,6 @@ class HeaderTest extends TestCase
       _filterable: true,
     );
 
-    $this->assertJsonStringEqualsJsonString(json_encode($header), '{"key":{"label":"label","required":true,"default":true,"sortable":true,"filterable":true}}');
+    $this->assertJsonStringEqualsJsonString(json_encode($header), '{"key":"key", "label":"label","required":true,"default":true,"sortable":true,"filterable":true}');
   }
 }
