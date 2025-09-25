@@ -15,7 +15,6 @@ class Row implements JsonSerializable
     protected string  $_id,
     protected ?string $_uri = null,
     protected ?string $_target = null,
-    protected ?string $_gaid = null
   )
   {
   }
