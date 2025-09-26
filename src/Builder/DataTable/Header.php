@@ -21,13 +21,11 @@ class Header implements JsonSerializable
 
   public function jsonSerialize(): array
   {
-    return [
-      'key'        => $this->_key,
-      'label'      => $this->_label,
-      'required'   => $this->_required,
-      'default'    => $this->_default,
-      'sortable'   => $this->_sortable,
-      'filterable' => $this->_filterable,
-    ];
+    $ret = [];
+    foreach(get_object_vars($this) as $key => $value)
+    {
+      $ret[trim($key, '_')] = $value;
+    }
+    return array_filter($ret);
   }
 }
