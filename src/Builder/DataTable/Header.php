@@ -13,7 +13,8 @@ class Header implements JsonSerializable
     protected ?bool  $_default = true,
     protected ?bool  $_sortable = true,
     protected ?bool  $_filterable = true,
-    protected ?bool  $_visible = true,
+    protected ?bool  $_hideHeader = false, // = show/hide header text
+    protected ?bool  $_hideColumn = false, // = show/hide entire column including header
   )
   {
   }
