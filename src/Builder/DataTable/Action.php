@@ -11,9 +11,9 @@ class Action implements JsonSerializable
     protected string  $_uri,
     protected ?string $_target = null,
     protected ?string $_gaid = null,
-    protected ?string $confirmType = null,
-    protected ?string $confirmTitle = null,
-    protected ?string $confirmTontent = null,
+    protected ?string $_confirmType = null,
+    protected ?string $_confirmTitle = null,
+    protected ?string $_confirmTontent = null,
   )
   {
   }
