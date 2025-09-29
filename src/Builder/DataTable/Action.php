@@ -13,7 +13,7 @@ class Action implements JsonSerializable
     protected ?string $_gaid = null,
     protected ?string $_confirmType = null,
     protected ?string $_confirmTitle = null,
-    protected ?string $_confirmTontent = null,
+    protected ?string $_confirmContent = null,
   )
   {
   }
