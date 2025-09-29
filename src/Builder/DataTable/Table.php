@@ -12,7 +12,6 @@ class Table implements JsonSerializable
   public $perPage = 10;
   public $total = 0;
   public $page = 1;
-  public $totalPages = 1;
 
   public function addRow(Row $row): static
   {
