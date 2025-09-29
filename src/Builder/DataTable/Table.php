@@ -31,6 +31,12 @@ class Table implements JsonSerializable
         unset($rows[$key]);
       }
     }
-    return ['rows' => array_filter($rows)];
+
+    return [
+      'perPage' => $this->perPage,
+      'total'   => $this->total,
+      'page'    => $this->page,
+      'rows'    => array_filter($rows),
+    ];
   }
 }
