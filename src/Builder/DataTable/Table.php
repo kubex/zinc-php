@@ -9,6 +9,11 @@ class Table implements JsonSerializable
   /** @var Row[] $_rows */
   protected array $_rows = [];
 
+  public $perPage = 10;
+  public $total = 0;
+  public $page = 1;
+  public $totalPages = 1;
+
   public function addRow(Row $row): static
   {
     $this->_rows[] = $row;
