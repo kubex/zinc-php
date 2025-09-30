@@ -8,7 +8,7 @@ class Cell implements JsonSerializable
 {
   public function __construct(
     protected string  $_text,
-    protected string  $_heading,
+    protected string  $_column,
     protected ?string $_color = null,
     protected ?string $_style = null,
     protected ?string $_iconSrc = null,
@@ -37,5 +37,40 @@ class Cell implements JsonSerializable
       }
     }
     return array_filter($properties);
+  }
+
+  public static function i($column, $content): static
+  {
+    return new static($content, $column);
+  }
+
+  public function withLink(string $uri, ?string $target = null, ?string $gaid = null)
+  {
+    $this->_uri = $uri;
+    if($target)
+    {
+      $this->_target = $target;
+    }
+    if($gaid)
+    {
+      $this->_gaid = $gaid;
+    }
+    return $this;
+  }
+
+  public function withIcon(string $src, ?string $color = null)
+  {
+    $this->_iconSrc = $src;
+    if($color)
+    {
+      $this->_iconColor = $color;
+    }
+    return $this;
+  }
+
+  public function asChip(string $color)
+  {
+    $this->_chipColor = $color;
+    return $this;
   }
 }
