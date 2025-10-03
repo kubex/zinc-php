@@ -30,6 +30,6 @@ class Action implements JsonSerializable
         unset($properties[$key]);
       }
     }
-    return array_filter($properties);
+    return array_filter($properties, function ($property) { return !is_null($property); });
   }
 }

@@ -36,7 +36,7 @@ class Table implements JsonSerializable
       'perPage' => $this->perPage,
       'total'   => $this->total,
       'page'    => $this->page,
-      'rows'    => array_filter($rows),
+      'rows'    => array_filter($rows, function ($row) { return !is_null($row); }),
     ];
   }
 }
