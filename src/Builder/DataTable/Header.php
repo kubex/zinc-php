@@ -15,6 +15,7 @@ class Header implements JsonSerializable
     protected ?bool  $_filterable = true,
     protected ?bool  $_hideHeader = false, // = show/hide header text
     protected ?bool  $_hideColumn = false, // = show/hide entire column including header
+    protected ?bool  $_secondary = false, // = secondary data to show on row expand
   )
   {
   }
