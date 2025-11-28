@@ -20,7 +20,7 @@ class Cell implements JsonSerializable
     protected ?string $_sortValue = null,
     protected ?string $_uri = null,
     protected ?string $_target = null,
-    protected ?string $_copyable = null,
+    protected ?bool $_copyable = null,
   )
   {
   }
