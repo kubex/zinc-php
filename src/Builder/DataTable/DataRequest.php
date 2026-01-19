@@ -9,4 +9,5 @@ class DataRequest
   public string $sortColumn = "";
   public string $sortDirection = "";
   public string $filter = "";
+  public string $search = "";
 }
