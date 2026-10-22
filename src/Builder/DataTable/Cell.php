@@ -21,6 +21,7 @@ class Cell implements JsonSerializable
     protected ?string $_uri = null,
     protected ?string $_target = null,
     protected ?bool $_copyable = null,
+    protected ?string $_badgeType = null,
   )
   {
   }
@@ -72,6 +73,12 @@ class Cell implements JsonSerializable
   public function asChip(string $color)
   {
     $this->_chipColor = $color;
+    return $this;
+  }
+
+  public function asBadge(string $type)
+  {
+    $this->_badgeType = $type;
     return $this;
   }
 }

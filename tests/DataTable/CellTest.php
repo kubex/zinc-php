@@ -58,4 +58,13 @@ class CellTest extends TestCase
 
     $this->assertJsonStringEqualsJsonString($expected, $result);
   }
+
+  public function testBadge()
+  {
+    $cell = (new Cell('Active', 'status'))->asBadge('success');
+    $this->assertJsonStringEqualsJsonString(
+      json_encode(['text' => 'Active', 'column' => 'status', 'badgeType' => 'success']),
+      json_encode($cell)
+    );
+  }
 }
