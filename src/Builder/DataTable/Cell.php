@@ -22,6 +22,7 @@ class Cell implements JsonSerializable
     protected ?string $_target = null,
     protected ?bool $_copyable = null,
     protected ?string $_badgeType = null,
+    protected ?bool $_badgeDot = null,
   )
   {
   }
@@ -76,9 +77,10 @@ class Cell implements JsonSerializable
     return $this;
   }
 
-  public function asBadge(string $type)
+  public function asBadge(string $type, ?bool $dot = null)
   {
     $this->_badgeType = $type;
+    $this->_badgeDot = $dot;
     return $this;
   }
 }
